@@ -1,1 +1,1 @@
-require("lua.dhruv.init")
+require("dhruv.init")
