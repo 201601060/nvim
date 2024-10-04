@@ -23,7 +23,7 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = DhruvGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
