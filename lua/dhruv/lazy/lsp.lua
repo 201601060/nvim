@@ -21,13 +21,13 @@ return {
                 "tsserver"
             },
             handlers = {
-                function (server_name) -- default handler (optional)
-                    require("lspconfig")[server_name].setup{}
+                function(server_name) -- default handler (optional)
+                    require("lspconfig")[server_name].setup {}
                 end,
             }
         })
         local cmp = require('cmp')
-        local cmp_select = {behavior = cmp.SelectBehavior.Select}
+        local cmp_select = { behavior = cmp.SelectBehavior.Select }
         cmp.setup({
             snippet = {
                 expand = function(args)
@@ -44,12 +44,11 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' }, -- For luasnip users.
             }, {
-                    { name = 'buffer' },
+                { name = 'buffer' },
             })
         })
         vim.diagnostic.config({
             virtual_text = true
         })
-
     end
 }
