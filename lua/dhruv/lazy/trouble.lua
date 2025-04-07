@@ -1,22 +1,22 @@
 return {
-	{
-		"folke/trouble.nvim",
-		config = function()
-			require("trouble").setup({
-				icon = false,
-			})
+    {
+        "folke/trouble.nvim",
+        config = function()
+            require("trouble").setup({
+                icon = false,
+            })
 
             vim.keymap.set("n", "<leader>tt", function()
-                require("trouble").toggle()
+                require("trouble").toggle({ mode = "diagnostics" })
             end)
 
             vim.keymap.set("n", "[d", function()
-                require("trouble").next({skip_groups = true, jump = true});
+                require("trouble").next({ mode = "diagnostics", skip_groups = true, jump = true });
             end)
 
             vim.keymap.set("n", "]d", function()
-                require("trouble").previous({skip_groups = true, jump = true});
+                require("trouble").prev({ mode = "diagnostics", skip_groups = true, jump = true });
             end)
-		end,
-	},
+        end,
+    },
 }
